@@ -1,0 +1,12 @@
+name = "origami-skies"
+main = "worker.js"
+compatibility_date = "2025-04-01"
+
+# Online multiplayer: satu Durable Object per kode room
+[[durable_objects.bindings]]
+name = "ROOMS"
+class_name = "Room"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Room"]
